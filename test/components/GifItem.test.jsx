@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react"
-import { default as GifItem } from "../../src/components/GifItem"
+import { render, screen } from '@testing-library/react'
+import { default as GifItem } from '../../src/components/GifItem'
 
 describe('Test on <GifItem />', () => {
 
