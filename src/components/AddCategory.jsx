@@ -1,5 +1,6 @@
 import { useState } from "react"
 import PropTypes from 'prop-types'
+import { logDOM } from "@testing-library/react"
 
 const AddCategory = ({ onNewCategory }) => {
 
@@ -19,7 +20,7 @@ const AddCategory = ({ onNewCategory }) => {
     }
 
     return (
-        <form onSubmit={ handleSubmit }>
+        <form onSubmit={ handleSubmit } aria-label="form">
             <input 
             type="text" 
             placeholder="Buscar gif"
