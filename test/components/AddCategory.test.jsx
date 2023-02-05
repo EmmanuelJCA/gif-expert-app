@@ -3,6 +3,13 @@ import { default as AddCategory} from '../../src/components/AddCategory'
 
 describe('Tests on <AddCategory />', () => {
 
+    test('should match the snapshot', () => {
+
+        const { container } = render( <AddCategory onNewCategory={() => {}} /> )
+        expect( container ).toMatchSnapshot()
+
+    })
+
     test('should change the value in the text box', () => {
 
         render( 

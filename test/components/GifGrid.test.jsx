@@ -1,12 +1,26 @@
 import { render, screen } from '@testing-library/react'
 import { default as GifGrid } from '../../src/components/GifGrid'
-import { useFetchGifs } from '../../src/hooks/useFetchGif'
+import { useFetchGifs } from '../../src/hooks/useFetchGifs'
 
-jest.mock('../../src/hooks/useFetchGif')
+jest.mock('../../src/hooks/useFetchGifs')
 
 describe('Tests on <GifGrid />', () => {
 
     const category = 'One Punch'
+
+    test('should match the snapshot', () => {
+
+        useFetchGifs.mockReturnValue({
+            images: [],
+            isLoading: true,
+        })
+
+        const { container } = render(
+            <GifGrid category={ category } />
+        )
+        expect( container ).toMatchSnapshot()
+
+    })
 
     test('should show the loading only', () => {
 

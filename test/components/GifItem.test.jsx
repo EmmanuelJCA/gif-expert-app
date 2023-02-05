@@ -6,7 +6,7 @@ describe('Test on <GifItem />', () => {
     const title = 'Saitama'
     const url = 'https://one-punch.com/saitama.jpg'
 
-    test('must match the snapshot', () => {
+    test('should match the snapshot', () => {
 
          const { container } = render(
            <GifItem 

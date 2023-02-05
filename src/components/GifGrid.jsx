@@ -1,11 +1,11 @@
 import PropTypes from 'prop-types'
-import { useFetchGifs } from "../hooks/useFetchGif"
+import { useFetchGifs } from "../hooks/useFetchGifs"
 import GifItem from "./GifItem"
 
 
 const GifGrid = ({ category }) => {
     
-    const {images, isLoading } = useFetchGifs( category )
+    const { images, isLoading } = useFetchGifs( category )
 
     return (
         <>
